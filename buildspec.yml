@@ -12,4 +12,5 @@ artifacts:
   files:
     - target/gs-*.jar
     - appspec.yml
+    - scripts  
   discard-paths: yes
