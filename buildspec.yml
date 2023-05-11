@@ -15,7 +15,7 @@
 #    - scripts  
 #  discard-paths: yes
 ######################
-ersion: 0.2
+version: 0.2
 
 phases:
   install:
