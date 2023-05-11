@@ -4,8 +4,6 @@ phases:
     runtime-versions:
       java: corretto11
     commands:
-      #      - yum update -y
-        #      - sudo amazon-linux-extras install java-openjdk11
       - yum install -y maven
   build:
     commands:
@@ -13,12 +11,5 @@ phases:
 artifacts:
   files:
     - target/gs-*.jar
-
-
-      #artifacts:
-      #  discard-paths: yes
-      #  files:
-      #    - target/*.war
-      #    - scripts/*
-      #    - appspec.yml
-
+    - appspec.yml
+  discard-paths: yes
