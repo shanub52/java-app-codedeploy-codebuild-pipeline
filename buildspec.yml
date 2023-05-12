@@ -10,9 +10,10 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/gs-spring-boot-0.1.0.war
-    - appspec.yml
-    - scripts/** 
+#    - target/gs-spring-boot-0.1.0.war
+#    - appspec.yml
+#    - scripts
+     - '**/*'  
   discard-paths: yes
 ######################
  
