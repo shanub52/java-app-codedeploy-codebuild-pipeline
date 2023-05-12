@@ -28,7 +28,7 @@ files:
     destination: /opt/myapp
 hooks:
   AfterInstall:
-    - location: deploy_war.sh
+    - location: scripts/deploy_war.sh
       timeout: 180
       runas: root
         
