@@ -1,49 +1,18 @@
-#version: 0.2
-#phases:
-#  install:
-#    runtime-versions:
-#      java: corretto11
-#    commands:
-#      - yum install -y maven
-#  build:
-#    commands:
-#      - mvn package
-#artifacts:
-#  files:
-#    - target/gs-*.jar
-#    - appspec.yml
-#    - scripts  
-#  discard-paths: yes
-######################
 version: 0.2
-
 phases:
   install:
     runtime-versions:
       java: corretto11
     commands:
       - yum install -y maven
-  pre_build:
-    commands:
-      - echo "Executing pre-build phase"
-      - mvn clean
   build:
     commands:
-      - echo "Executing build phase"
-      - mvn install
-#  post_build:
-#    commands:
-#      - echo "Executing post-build phase"
-#      - mkdir -p artifacts
-#      - mv target/gs-*.jar artifacts/gs-*.jar
-
-#artifacts:
-#  files:
-#    - '**/*'
-#  discard-paths: yes
+      - mvn package
 artifacts:
   files:
     - target/gs-spring-boot-0.1.0.war
-    - scripts/*
     - appspec.yml
-  discard-paths: yes  
+    - scripts  
+  discard-paths: yes
+######################
+ 

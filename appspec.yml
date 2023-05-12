@@ -1,34 +1,34 @@
-#version: 0.0
-#os: linux
-#files:
-#  - source: /
-#    destination: /tmp
-#hooks:
-#  BeforeInstall:
-#    - location: scripts/stop_tomcat.sh
-#      timeout: 60
-#      runas: root
-#  AfterInstall:
-#    - location: scripts/start_tomcat.sh
-#      timeout: 60
-#      runas: root
-#  ApplicationStart:
-#    - location: scripts/deploy_war.sh
-#      timeout: 300
-#      runas: root
-#  ValidateService:
-#    - location: scripts/validate.sh
-#      timeout: 20
-#      runas: root
-########################3
 version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/myapp
+    destination: /tmp
 hooks:
-  AfterInstall:
-    - location: deploy_war.sh
-      timeout: 180
+  BeforeInstall:
+    - location: scripts/stop_tomcat.sh
+      timeout: 60
       runas: root
+  AfterInstall:
+    - location: scripts/start_tomcat.sh
+      timeout: 60
+      runas: root
+  ApplicationStart:
+    - location: scripts/deploy_war.sh
+      timeout: 300
+      runas: root
+  ValidateService:
+    - location: scripts/validate.sh
+      timeout: 20
+      runas: root
+########################3
+#version: 0.0
+#os: linux
+#files:
+#  - source: /
+#    destination: /opt/myapp
+#hooks:
+#  AfterInstall:
+#    - location: deploy_war.sh
+#      timeout: 180
+#      runas: root
         
