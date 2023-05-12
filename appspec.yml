@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /tmp
+    destination: /opt/myapp
 hooks:
   BeforeInstall:
     - location: scripts/stop_tomcat.sh
