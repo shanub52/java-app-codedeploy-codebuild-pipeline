@@ -1,19 +1,14 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
-      java: corretto11
-    commands:
-      - yum install -y maven
+      java: openjdk11
   build:
     commands:
-      - mvn package
+      - mvn clean package
+
 artifacts:
   files:
-#    - target/gs-spring-boot-0.1.0.war
-#    - appspec.yml
-#    - scripts
-     - '**/*'  
-  discard-paths: yes
-######################
+    - target/gs-spring-boot-0.1.0.war
  
