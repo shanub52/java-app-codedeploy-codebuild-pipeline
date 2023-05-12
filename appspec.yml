@@ -12,4 +12,3 @@ hooks:
     - location: scripts/start_tomcat.sh
       timeout: 180
       runas: root
-        
