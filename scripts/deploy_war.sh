@@ -2,7 +2,7 @@
 set -e
 
 # Define the path to the WAR file
-WAR_FILE=/opt/myapp/artifacts/gs-spring-boot-0.1.0.jar
+WAR_FILE=/opt/myapp/gs-spring-boot-0.1.0.jar
 
 # Define the path to the Tomcat installation directory
 TOMCAT_DIR=/opt/tomcat
