@@ -44,6 +44,6 @@ phases:
 artifacts:
   files:
     - target/gs-spring-boot-0.1.0.jar
-   - appspec.yml
+    - appspec.yml
     - 'scripts/*'  
   discard-paths: yes  

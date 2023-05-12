@@ -10,7 +10,7 @@ sudo systemctl stop tomcat
 sudo rm -rf /opt/tomcat/webapps/gs-*
 
 # Copy new WAR file to Tomcat webapps directory
-sudo cp /opt/myapp/artifacts/gs-*.jar /opt/tomcat/webapps/
+sudo cp /opt/myapp/artifacts/gs-spring-boot-0.1.0.jar /opt/tomcat/webapps/
 
 # Start Tomcat server
 sudo systemctl start tomcat
