@@ -31,13 +31,19 @@ phases:
     commands:
       - echo "Executing build phase"
       - mvn package
-  post_build:
-    commands:
-      - echo "Executing post-build phase"
-      - mkdir -p artifacts
-      - mv target/gs-*.jar artifacts/gs-*.jar
+#  post_build:
+#    commands:
+#      - echo "Executing post-build phase"
+#      - mkdir -p artifacts
+#      - mv target/gs-*.jar artifacts/gs-*.jar
 
+#artifacts:
+#  files:
+#    - '**/*'
+#  discard-paths: yes
 artifacts:
   files:
-    - '**/*'
-  discard-paths: yes
+    - target/gs-spring-boot-0.1.0.jar
+   - appspec.yml
+    - 'scripts/*'  
+  discard-paths: yes  
