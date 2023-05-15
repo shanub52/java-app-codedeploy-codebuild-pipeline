@@ -8,7 +8,7 @@ WAR_FILE=/opt/myapp/gs-spring-boot-0.1.0.war
 TOMCAT_DIR=/opt/tomcat
 
 # Stop the Tomcat server
-sudo systemctl stop tomcat
+#sudo systemctl stop tomcat
 
 # Remove the old application files
 sudo rm -rf $TOMCAT_DIR/webapps/gs-spring-boot-0.1.0.war
@@ -17,4 +17,4 @@ sudo rm -rf $TOMCAT_DIR/webapps/gs-spring-boot-0.1.0.war
 sudo cp $WAR_FILE $TOMCAT_DIR/webapps/
 
 # Start the Tomcat server
-sudo systemctl start tomcat
+#sudo systemctl start tomcat

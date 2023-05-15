@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
@@ -13,4 +12,5 @@ artifacts:
   files:
     - target/gs-*.war
     - appspec.yml
-    - 'scripts/*'  
+    - 'scripts/*'
+  discard-paths: yes   
