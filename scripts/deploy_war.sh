@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-
 # Define the path to the WAR file
 WAR_FILE=/opt/myapp/gs-spring-boot-0.1.0.war
 
