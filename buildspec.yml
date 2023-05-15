@@ -7,7 +7,7 @@ phases:
       - yum install -y maven
   build:
     commands:
-      - mvn clean install
+      - mvn package
 artifacts:
   files:
       - target/gs-spring-boot-0.1.0.jar
