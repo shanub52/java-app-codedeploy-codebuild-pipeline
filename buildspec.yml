@@ -7,8 +7,12 @@ phases:
       - yum install -y maven
   build:
     commands:
-      - mvn install
+      - mvn package
 artifacts:
   files:
-      - '**/*'
+      - target/gs-spring-boot-0.1.0.war
+      - appspec.yml
+      - 'scripts/*'
+      #- '**/*'  
+  discard-paths: yes
   discard-paths: yes   
