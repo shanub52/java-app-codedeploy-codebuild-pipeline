@@ -11,6 +11,6 @@ phases:
 artifacts:
   files:
     - target/gs-*.war
-    - appspec.yml
-    - 'scripts/*'
+    #- appspec.yml
+    #- 'scripts/*'
   discard-paths: yes   
