@@ -22,11 +22,11 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts/stop_tomcat.sh
-      timeout: 60
+      timeout: 180
       runas: root
   AfterInstall:
     - location: scripts/start_tomcat.sh
-      timeout: 60
+      timeout: 180
       runas: root
 #  applicationStart:
 #    - location: scripts/deploy_war.sh
