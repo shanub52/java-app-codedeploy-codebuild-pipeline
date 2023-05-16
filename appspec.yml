@@ -2,7 +2,7 @@
 #version: 0.0
 #os: linux
 #files:
-#  - source: /
+#  - source: /gs-spring-boot-0.1.0.jar
 #    destination: /opt/tomcat/webapps/
 #hooks:
 #  BeforeInstall:
@@ -18,7 +18,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/tomcat/webapps/
+    destination: /opt/myapp/
 hooks:
   BeforeInstall:
     - location: scripts/stop_tomcat.sh
@@ -28,11 +28,11 @@ hooks:
     - location: scripts/start_tomcat.sh
       timeout: 180
       runas: root
-#  applicationStart:
-#    - location: scripts/deploy_war.sh
-#      timeout: 300
-#      runas: root
-#  ValidateService:
-#    - location: scripts/validate.sh
-#      timeout: 20
-#      runas: root      
+  applicationStart:
+    - location: scripts/deploy_war.sh
+      timeout: 300
+      runas: root
+  ValidateService:
+    - location: scripts/validate.sh
+      timeout: 20
+      runas: root      

@@ -1,3 +1,23 @@
+#version: 0.2
+#phases:
+#  install:
+#    runtime-versions:
+#      java: corretto11
+#    commands:
+#      - yum install -y maven
+#  build:
+#    commands:
+#      - mvn package
+#      - mv target/gs-spring-boot-0.1.0.jar gs-spring-boot-0.1.0.jar  
+#artifacts:
+#  files:
+#      - gs-spring-boot-0.1.0.jar
+#      - appspec.yml
+#      - 'scripts/*'  
+#  #discard-paths: yes
+################################
+#
+#
 version: 0.2
 phases:
   install:
@@ -8,10 +28,11 @@ phases:
   build:
     commands:
       - mvn package
-      - mv target/gs-spring-boot-0.1.0.jar gs-spring-boot-0.1.0.jar  
+        #      - mv target/gs-spring-boot-0.1.0.jar gs-spring-boot-0.1.0.jar
 artifacts:
   files:
-      - gs-spring-boot-0.1.0.jar
+      - target/gs-spring-boot-0.1.0.jar
       - appspec.yml
-      - 'scripts/*'  
+      - 'scripts/*'
   #discard-paths: yes
+
