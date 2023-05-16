@@ -19,6 +19,12 @@ os: linux
 files:
   - source: /
     destination: /opt/myapp/
+permissions:
+  - object: /opt/myapp/scripts/*
+    mode: 775
+    owner: root
+    type:
+      - directory      
 hooks:
   BeforeInstall:
     - location: scripts/stop_tomcat.sh
